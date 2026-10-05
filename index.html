@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Пионерская дружина имени В.Е. Лобанка — ГУО «Средняя школа №212 г. Минска». Новости, инициативы и команда." />
+    <title>Пионерская дружина имени В.Е. Лобанка — ГУО «Средняя школа №212 г. Минска»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+            boxShadow: {
+              float: '0 24px 60px -30px rgba(24, 24, 27, .18)',
+              soft: '0 12px 32px -20px rgba(24, 24, 27, .18)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root { color-scheme: light; }
+      body {
+        background:
+          radial-gradient(circle at 95% 0%, #fae9e9 0, transparent 30rem),
+          radial-gradient(circle at 0% 55%, #eaf0f8 0, transparent 32rem),
+          #f7f7f6;
+      }
+      :where(a, button, [tabindex="0"]):focus-visible {
+        outline: 3px solid #be4653;
+        outline-offset: 4px;
+      }
+      .tab-button { background: #fff; color: #52525b; border: 1px solid #e4e4e7; }
+      .tab-button:hover { border-color: #a1a1aa; }
+      .tab-button[aria-selected="true"] { background: #18181b; color: #fff; border-color: #18181b; }
+      .tab-number { background: #f4f4f5; color: #71717a; }
+      .tab-button[aria-selected="true"] .tab-number { background: #ffffff1a; color: #fff; }
+      .tab-panel:not([hidden]) { animation: panel-in .25s ease-out; }
+      [hidden] { display: none !important; }
+      @keyframes panel-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen font-sans text-zinc-950 antialiased">
+    <a href="#sections" class="sr-only focus:not-sr-only focus:fixed focus:left-5 focus:top-5 focus:z-50 focus:rounded-xl focus:bg-white focus:p-4">Перейти к разделам</a>
+    <main class="mx-auto max-w-7xl px-4 py-4 sm:px-8 sm:py-8 lg:px-10">
+      <nav class="mb-6 flex items-center justify-between gap-4 rounded-2xl border border-white/80 bg-white/80 px-4 py-4 shadow-soft backdrop-blur sm:px-5" aria-label="Основная навигация">
+        <a href="#top" class="flex min-w-0 items-center gap-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-zinc-950 text-sm font-extrabold text-white" aria-hidden="true">212</span>
+          <span class="text-xs font-semibold leading-relaxed sm:text-sm">Дружина имени В.Е. Лобанка<span class="mt-0.5 block text-[10px] font-medium text-zinc-600 sm:text-xs">ГУО «Средняя школа №212 г. Минска»</span></span>
+        </a>
+        <a href="#contact" class="shrink-0 rounded-full bg-zinc-950 px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-zinc-700">Связаться <span class="hidden sm:inline" aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section id="top" class="grid overflow-hidden rounded-3xl border border-white bg-white shadow-float lg:grid-cols-[1.08fr_.92fr]" aria-labelledby="hero-title">
+        <div class="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+          <div class="mb-7 flex flex-wrap items-center gap-2">
+            <span class="rounded-full bg-zinc-950 px-3 py-1.5 text-[10px] font-bold tracking-wider text-white">АКТУАЛЬНО</span>
+            <span class="rounded-full bg-red-50 px-3 py-1.5 text-[10px] font-bold tracking-wider text-red-700">КОМАНДА ДОБРЫХ ДЕЛ</span>
+          </div>
+          <h1 id="hero-title" class="text-4xl font-extrabold leading-[1.06] tracking-[-.05em] sm:text-5xl xl:text-6xl">Пионерская дружина имени В.Е. Лобанка</h1>
+          <p class="mt-6 text-base leading-relaxed text-zinc-600 sm:text-lg">ГУО «Средняя школа №212 г. Минска» — объединяем октябрят и пионеров в команду лидеров!</p>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#sections" class="inline-flex items-center gap-3 rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700">Узнать о дружине <span aria-hidden="true">↓</span></a>
+            <p class="text-xs leading-relaxed text-zinc-500">Дружим. Помогаем.<br />Создаём будущее вместе.</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-center bg-gradient-to-br from-zinc-50 to-red-50/50 p-5 sm:p-8 lg:p-9">
+          <div class="w-full max-w-lg rounded-3xl border border-zinc-100 bg-white p-4 shadow-soft sm:p-5">
+            <img src="logo.jpg" alt="Логотипы школы и БРПО" width="1024" height="1030" class="aspect-square w-full rounded-2xl object-contain" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      </section>
+
+      <section id="sections" class="py-8 sm:py-12" aria-labelledby="sections-title">
+        <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-[.18em] text-red-700">Жизнь нашей команды</p>
+            <h2 id="sections-title" class="mt-2 text-3xl font-extrabold tracking-[-.04em] sm:text-4xl">Одна дружина. Много возможностей.</h2>
+          </div>
+          <p class="max-w-xs text-sm leading-relaxed text-zinc-600">Знакомьтесь с командой, открывайте новое и находите своё дело.</p>
+        </div>
+
+        <div class="flex gap-2 overflow-x-auto px-1 pb-4 pt-1 sm:gap-3" role="tablist" aria-label="Разделы дружины">
+          <button id="tab-news" type="button" role="tab" aria-selected="true" aria-controls="panel-news" tabindex="0" class="tab-button flex shrink-0 items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-soft transition"><span class="tab-number grid h-7 w-7 place-items-center rounded-lg text-[10px]">01</span>Наша дружина<span class="rounded-full bg-white px-2 py-1 text-[9px] font-bold text-zinc-950">НОВОЕ</span></button>
+          <button id="tab-octobrists" type="button" role="tab" aria-selected="false" aria-controls="panel-octobrists" tabindex="-1" class="tab-button flex shrink-0 items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-soft transition"><span class="tab-number grid h-7 w-7 place-items-center rounded-lg text-[10px]">02</span>Октябрята</button>
+          <button id="tab-pioneers" type="button" role="tab" aria-selected="false" aria-controls="panel-pioneers" tabindex="-1" class="tab-button flex shrink-0 items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-soft transition"><span class="tab-number grid h-7 w-7 place-items-center rounded-lg text-[10px]">03</span>Пионеры</button>
+          <button id="tab-charter" type="button" role="tab" aria-selected="false" aria-controls="panel-charter" tabindex="-1" class="tab-button flex shrink-0 items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-soft transition"><span class="tab-number grid h-7 w-7 place-items-center rounded-lg text-[10px]">04</span>Устав</button>
+          <button id="tab-symbols" type="button" role="tab" aria-selected="false" aria-controls="panel-symbols" tabindex="-1" class="tab-button flex shrink-0 items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-soft transition"><span class="tab-number grid h-7 w-7 place-items-center rounded-lg text-[10px]">05</span>Символика</button>
+        </div>
+
+        <div id="panel-news" class="tab-panel mt-2" role="tabpanel" aria-labelledby="tab-news" tabindex="0">
+          <div class="mb-5 flex flex-wrap items-center justify-between gap-3 px-1">
+            <div><h3 class="text-xl font-bold tracking-tight">Лента добрых дел</h3><p class="mt-1 text-sm text-zinc-600">Здесь появятся новости, фотографии и истории нашей дружины.</p></div>
+            <span class="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-[10px] font-bold tracking-wide text-zinc-500">3 ШАБЛОНА ПУБЛИКАЦИЙ</span>
+          </div>
+          <!-- Шаблоны: замените изображения, даты, заголовки и текст реальными новостями. -->
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="overflow-hidden rounded-3xl border border-white bg-white shadow-soft">
+              <div class="grid aspect-[16/10] place-items-center bg-zinc-100" role="img" aria-label="Место для фотографии первой публикации"><div class="text-center"><svg class="mx-auto h-10 w-10 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m3 17 5-5 4 4 4-5 5 6" /></svg><p class="mt-3 text-xs font-medium text-zinc-500">Фото публикации</p></div></div>
+              <div class="p-6"><time datetime="2026-10-05" class="inline-block rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-medium text-zinc-600">5 октября 2026</time><h4 class="mt-4 text-lg font-bold tracking-tight">Заголовок новости</h4><p class="mt-2 text-sm leading-relaxed text-zinc-600">Коротко расскажите о событии: что произошло, кто участвовал и какой результат вдохновил команду.</p><p class="mt-5 border-t border-zinc-100 pt-4 text-[10px] font-bold uppercase tracking-wider text-zinc-500">Шаблон · ещё не опубликовано</p></div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-white bg-white shadow-soft">
+              <div class="grid aspect-[16/10] place-items-center bg-red-50" role="img" aria-label="Место для фотографии второй публикации"><div class="text-center"><svg class="mx-auto h-10 w-10 text-red-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m3 17 5-5 4 4 4-5 5 6" /></svg><p class="mt-3 text-xs font-medium text-zinc-500">Фото публикации</p></div></div>
+              <div class="p-6"><time datetime="2026-10-05" class="inline-block rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-medium text-zinc-600">5 октября 2026</time><h4 class="mt-4 text-lg font-bold tracking-tight">Название доброй инициативы</h4><p class="mt-2 text-sm leading-relaxed text-zinc-600">Добавьте историю волонтёрского дела: кому помогли, что сделали вместе и почему это было важно.</p><p class="mt-5 border-t border-zinc-100 pt-4 text-[10px] font-bold uppercase tracking-wider text-zinc-500">Шаблон · ещё не опубликовано</p></div>
+            </article>
+            <article class="overflow-hidden rounded-3xl border border-white bg-white shadow-soft">
+              <div class="grid aspect-[16/10] place-items-center bg-slate-100" role="img" aria-label="Место для фотографии третьей публикации"><div class="text-center"><svg class="mx-auto h-10 w-10 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m3 17 5-5 4 4 4-5 5 6" /></svg><p class="mt-3 text-xs font-medium text-zinc-500">Фото публикации</p></div></div>
+              <div class="p-6"><time datetime="2026-10-05" class="inline-block rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-medium text-zinc-600">5 октября 2026</time><h4 class="mt-4 text-lg font-bold tracking-tight">История нашей команды</h4><p class="mt-2 text-sm leading-relaxed text-zinc-600">Поделитесь новым открытием, общим достижением или идеей, которая стала первым шагом к большому проекту.</p><p class="mt-5 border-t border-zinc-100 pt-4 text-[10px] font-bold uppercase tracking-wider text-zinc-500">Шаблон · ещё не опубликовано</p></div>
+            </article>
+          </div>
+        </div>
+
+        <article id="panel-octobrists" class="tab-panel mt-2 overflow-hidden rounded-3xl border border-white bg-white shadow-float" role="tabpanel" aria-labelledby="tab-octobrists" tabindex="0" hidden>
+          <div class="grid lg:grid-cols-[1.1fr_.9fr]">
+            <div class="p-7 sm:p-10"><span class="rounded-full bg-amber-50 px-3 py-1.5 text-[11px] font-bold text-amber-800">2–4 КЛАССЫ · ПЕРВЫЕ ОТКРЫТИЯ</span><h3 class="mt-6 text-3xl font-extrabold tracking-[-.04em] sm:text-4xl">Октябрята: маленькие шаги к большим делам</h3><p class="mt-5 leading-relaxed text-zinc-600">Октябрята — младшие школьники 2–4 классов. Их путь начинается с любопытства: задать вопрос, попробовать новое, заметить, кому нужна помощь. В дружине каждый может найти друзей, раскрыть талант и почувствовать: «Я тоже могу сделать мир добрее».</p><p class="mt-4 leading-relaxed text-zinc-600">Учимся быть хорошими товарищами: слушать, делиться, поддерживать друг друга и радоваться общим победам. Помогаем дома и в классе, бережём природу, придумываем маленькие полезные дела. Здесь не нужно всё уметь заранее — важно желание пробовать вместе.</p></div>
+            <aside class="bg-amber-50/60 p-7 sm:p-10"><p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Наши первые суперсилы</p><ul class="mt-6 space-y-5 text-sm leading-relaxed text-zinc-600"><li><strong class="block text-base text-zinc-950">Любопытство</strong>Исследовать, спрашивать и не бояться новых задач.</li><li><strong class="block text-base text-zinc-950">Дружба</strong>Быть рядом, замечать чувства других и решать споры словами.</li><li><strong class="block text-base text-zinc-950">Забота</strong>Делать добро без напоминаний и видеть ценность маленькой помощи.</li></ul></aside>
+          </div>
+        </article>
+
+        <article id="panel-pioneers" class="tab-panel mt-2 overflow-hidden rounded-3xl border border-white bg-white shadow-float" role="tabpanel" aria-labelledby="tab-pioneers" tabindex="0" hidden>
+          <div class="grid lg:grid-cols-[1.1fr_.9fr]">
+            <div class="p-7 sm:p-10"><span class="rounded-full bg-red-50 px-3 py-1.5 text-[11px] font-bold text-red-700">СРЕДНЯЯ И СТАРШАЯ ШКОЛА</span><h3 class="mt-6 text-3xl font-extrabold tracking-[-.04em] sm:text-4xl">Пионеры: лидерство начинается с поступка</h3><p class="mt-5 leading-relaxed text-zinc-600">Пионеры — ребята средней и старшей школы, готовые брать инициативу и ответственность. Они замечают, что можно улучшить, предлагают решения, собирают команду и доводят начатое до результата. Лидер здесь не тот, кто говорит громче, а тот, кто помогает другим проявить себя.</p><p class="mt-4 leading-relaxed text-zinc-600">Любовь к своей стране проявляется в конкретных делах: уважать её историю и культуру, заботиться о людях, беречь природу и родной город. Волонтёрство, помощь младшим и общие проекты учат нас держать слово, действовать честно и быть опорой друг для друга.</p></div>
+            <aside class="bg-zinc-50 p-7 sm:p-10"><p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Лидерский маршрут</p><ol class="mt-6 space-y-4"><li class="rounded-2xl bg-white p-5 shadow-soft"><strong>01. Замечаю задачу</strong><p class="mt-1 text-sm leading-relaxed text-zinc-600">Не прохожу мимо и предлагаю понятный первый шаг.</p></li><li class="rounded-2xl bg-white p-5 shadow-soft"><strong>02. Действую с командой</strong><p class="mt-1 text-sm leading-relaxed text-zinc-600">Учитываю идеи других и нахожу дело для каждого.</p></li><li class="rounded-2xl bg-white p-5 shadow-soft"><strong>03. Отвечаю за результат</strong><p class="mt-1 text-sm leading-relaxed text-zinc-600">Выполняю обещания, учусь на опыте и делюсь успехом.</p></li></ol></aside>
+          </div>
+        </article>
+
+        <article id="panel-charter" class="tab-panel mt-2 rounded-3xl border border-white bg-white p-7 shadow-float sm:p-10" role="tabpanel" aria-labelledby="tab-charter" tabindex="0" hidden>
+          <p class="text-[11px] font-bold uppercase tracking-widest text-red-700">Ценности в действии</p>
+          <h3 class="mt-3 text-3xl font-extrabold tracking-[-.04em] sm:text-4xl">Устав: наш договор быть командой</h3>
+          <p class="mt-5 max-w-3xl leading-relaxed text-zinc-600">Сильная дружина начинается с доверия. Наши правила помогают каждому чувствовать себя услышанным, безопасно пробовать новое и видеть смысл в общих делах. Мы выбираем не просто говорить о ценностях, а воплощать их каждый день.</p>
+          <ol class="mt-7 grid gap-4 sm:grid-cols-2">
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>01. Уважаем каждого</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Слушаем без насмешек, бережно относимся к отличиям и обсуждаем идеи, а не личности.</p></li>
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>02. Держим слово</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Берём посильные задачи, соблюдаем договорённости и заранее просим помощи, если она нужна.</p></li>
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>03. Помогаем осознанно</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Узнаём, какая поддержка действительно нужна, действуем безопасно и уважаем личные границы.</p></li>
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>04. Учимся и предлагаем</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Не боимся вопросов и ошибок. У каждой инициативы есть право быть услышанной и получить обратную связь.</p></li>
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>05. Бережём общее</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Заботимся о школе, природе и родном городе. Уважаем историю, культуру и труд других людей.</p></li>
+            <li class="rounded-2xl bg-zinc-50 p-5"><strong>06. Делим успех</strong><p class="mt-2 text-sm leading-relaxed text-zinc-600">Благодарим за любой вклад и помним: победа команды складывается из усилий каждого.</p></li>
+          </ol>
+          <p class="mt-6 text-xs leading-relaxed text-zinc-500">Это авторское изложение ценностей дружины, а не официальный нормативный документ. С действующим уставом можно ознакомиться у старшего вожатого.</p>
+        </article>
+
+        <article id="panel-symbols" class="tab-panel mt-2 rounded-3xl border border-white bg-white p-7 shadow-float sm:p-10" role="tabpanel" aria-labelledby="tab-symbols" tabindex="0" hidden>
+          <p class="text-[11px] font-bold uppercase tracking-widest text-red-700">Символы БРПО</p>
+          <h3 class="mt-3 text-3xl font-extrabold tracking-[-.04em] sm:text-4xl">Знаки, за которыми стоят поступки</h3>
+          <p class="mt-5 max-w-3xl leading-relaxed text-zinc-600">Символика объединяет поколения и напоминает о ценностях, которые мы разделяем. Её настоящий смысл раскрывается в дружбе, ответственности и готовности помогать — не только на торжественных встречах, но и каждый день.</p>
+          <div class="mt-7 grid gap-4 md:grid-cols-3">
+            <section class="rounded-2xl border border-red-100 bg-red-50/50 p-6"><span class="text-[11px] font-bold tracking-widest text-red-700">01 / ЕДИНСТВО</span><h4 class="mt-4 text-xl font-bold">Пионерский галстук</h4><p class="mt-3 text-sm leading-relaxed text-zinc-600">Галстук — знак принадлежности к пионерской команде. Он напоминает о связи поколений, верности общему делу и ответственности за свои поступки. Надевая его, важно помнить не только о традиции, но и о готовности поддержать товарища.</p></section>
+            <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6"><span class="text-[11px] font-bold tracking-widest text-zinc-500">02 / ПРИЧАСТНОСТЬ</span><h4 class="mt-4 text-xl font-bold">Пионерский значок</h4><p class="mt-3 text-sm leading-relaxed text-zinc-600">Значок делает нашу принадлежность к организации видимой. За этим небольшим знаком — общие ценности, добрые дела и уважение к дружине. Это напоминание: репутацию команды создаёт каждый из нас.</p></section>
+            <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6"><span class="text-[11px] font-bold tracking-widest text-zinc-500">03 / УВАЖЕНИЕ</span><h4 class="mt-4 text-xl font-bold">Пионерский салют</h4><p class="mt-3 text-sm leading-relaxed text-zinc-600">Салют — традиционный жест приветствия и уважения. Поднятая над головой ладонь напоминает, что общие интересы важны наряду с личными. Это знак готовности действовать вместе и бережно относиться к пионерским традициям.</p></section>
+          </div>
+        </article>
+        <noscript><p class="mt-4 rounded-2xl bg-white p-5 text-sm text-zinc-600">Для переключения разделов включите JavaScript в браузере. Контакты доступны ниже.</p></noscript>
+      </section>
+
+      <footer id="contact" class="mb-4 grid overflow-hidden rounded-3xl bg-zinc-950 text-white shadow-float lg:grid-cols-[1.1fr_.9fr]">
+        <div class="p-7 sm:p-10 lg:p-12">
+          <span class="rounded-full bg-white/15 px-3 py-1.5 text-[10px] font-bold tracking-[.12em] text-white">ПРИСОЕДИНЯЙСЯ К КОМАНДЕ</span>
+          <h2 class="mt-6 max-w-lg text-4xl font-extrabold tracking-[-.05em] sm:text-5xl">Вступить в ряды!</h2>
+          <a href="tel:+375299641133" class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-bold text-zinc-950 transition hover:bg-red-100 focus:outline-none focus:ring-4 focus:ring-red-300">Связаться с нами <span class="text-xl leading-none" aria-hidden="true">→</span></a>
+        </div>
+        <div class="border-t border-white/10 bg-white/[.06] p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+          <p class="text-xs font-bold uppercase tracking-[.16em] text-zinc-400">Контакты</p>
+          <dl class="mt-6 space-y-5 text-sm leading-relaxed text-zinc-300">
+            <div><dt class="mb-1 text-xs text-zinc-500">Педагог-организатор, старший вожатый</dt><dd class="font-medium text-white">Довжик Мария Сергеевна</dd></div>
+            <div><dt class="mb-1 text-xs text-zinc-500">Телефон</dt><dd><a class="font-medium text-white hover:text-red-200" href="tel:+375299641133">+375 29 964-11-33</a></dd></div>
+            <div><dt class="mb-1 text-xs text-zinc-500">Адрес</dt><dd class="font-medium text-white">г. Минск, ул. Лобанка, 95</dd></div>
+          </dl>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      (() => {
+        const tablist = document.querySelector('[role="tablist"]');
+        const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+
+        function activateTab(selectedTab, moveFocus = false) {
+          tabs.forEach((tab) => {
+            const selected = tab === selectedTab;
+            tab.setAttribute('aria-selected', String(selected));
+            tab.tabIndex = selected ? 0 : -1;
+            document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+          });
+          if (moveFocus) selectedTab.focus();
+        }
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => activateTab(tab));
+          tab.addEventListener('keydown', (event) => {
+            let next;
+            switch (event.key) {
+              case 'ArrowRight': next = (index + 1) % tabs.length; break;
+              case 'ArrowLeft': next = (index - 1 + tabs.length) % tabs.length; break;
+              case 'Home': next = 0; break;
+              case 'End': next = tabs.length - 1; break;
+              default: return;
+            }
+            event.preventDefault();
+            activateTab(tabs[next], true);
+          });
+        });
+        activateTab(tabs[0]);
+      })();
+    </script>
+  </body>
+</html>
