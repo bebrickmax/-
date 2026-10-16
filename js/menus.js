@@ -489,10 +489,23 @@
       actions: [
         {
           label: 'Скачать PNG', kind: 'primary', icon: 'download', keepOpen: true,
-          onClick: () => {
+          onClick: async () => {
+            const filename = `komanda-212-${p.name.replace(/[^\wА-Яа-яЁё-]+/g, '_')}.png`;
+            // Внутри просмотрщика Claude файл отдаётся через его окно сохранения
+            const dl = window.claude && window.claude.use ? await window.claude.use('downloads').catch(() => null) : null;
+            if (dl) {
+              const blob = await new Promise((r) => canvas.toBlob(r, 'image/png'));
+              try {
+                await dl.save({ filename, data: blob });
+                UI.toast('Билет сохранён!');
+              } catch (e) {
+                if (!e || e.code !== 'declined') UI.toast('Не получилось сохранить файл — сделай скриншот.');
+              }
+              return;
+            }
             try {
               const a = document.createElement('a');
-              a.download = `komanda-212-${p.name.replace(/[^\wА-Яа-яЁё-]+/g, '_')}.png`;
+              a.download = filename;
               a.href = canvas.toDataURL('image/png');
               document.body.appendChild(a);
               a.click();
